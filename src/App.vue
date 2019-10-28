@@ -14,11 +14,10 @@ export default {
   name: 'app',
   // Register the AppHeader Component
   created() {
-    let currentUser;
-
     getLoggedInUser().then(user => {
-      currentUser = user
-      this.$store.commit('setUser', currentUser)
+      if (user) {
+        this.$store.commit('setUser', user)
+      }
     });
 
   },
