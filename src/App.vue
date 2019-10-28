@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-header></app-header>
+    <!-- Router entry point -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+import { getLoggedInUser } from "./services/firebaseService";
 
 export default {
   name: 'app',
+  // Register the AppHeader Component
+  created() {
+    let currentUser;
+
+    getLoggedInUser().then(user => {
+      currentUser = user
+      this.$store.commit('setUser', currentUser)
+    });
+
+  },
+
   components: {
-    HelloWorld
+    AppHeader
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
