@@ -3,13 +3,13 @@ import firebase from "firebase";
 
 // config data from your firebase dashboard
 const CONFIG = {
-  apiKey: "AIzaSyC6r4kvO8Y4k-mRZ9HaAtEPTEiPvv_QSOA",
-  authDomain: "vue-fire-app-84fde.firebaseapp.com",
-  databaseURL: "https://vue-fire-app-84fde.firebaseio.com",
-  projectId: "vue-fire-app-84fde",
-  storageBucket: "vue-fire-app-84fde.appspot.com",
-  messagingSenderId: "339738093363",
-  appId: "1:339738093363:web:9463ac965c5099486f0046"
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
+  authDomain: "xxxxxxxxxxxxxxxxxxxxxxxx",
+  databaseURL: "https://xxxxxxxxxxxxxxx",
+  projectId: "xxxxxxxxxxxxxxxxx",
+  storageBucket: "xxxxxxxxxxxxxxxx",
+  messagingSenderId: "xxxxxxxxxxxxxxx",
+  appId: "xxxxxxxxxxxxxxxxxxxxxx"
 };
 
 // Export methods which will be used to access the firebase api
